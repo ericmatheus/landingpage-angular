@@ -4,13 +4,14 @@
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    padding: 20px;
+    padding: 16px 20px;
+    
 
     &:disabled{
         opacity: 0.6;
     }
 
-    &:primary{
+    &.primary{
         color: white;
         background: -webkit-linear-gradient(180deg, $primary-color, $secondary-color);
         font-size: 20px;
@@ -18,7 +19,7 @@
         
     }
 
-    &:secondary{
+    &.secondary{
         color: white;
         background: -webkit-linear-gradient(180deg, $primary-color, $secondary-color);
         font-size: 16px;
@@ -26,4 +27,7 @@
         
     }
 
+    
+
 }
+
