@@ -8,11 +8,18 @@
         </p>
     </div>
 
-    <form action="">
-        <label for="email">Name</label>
-        <input type="text" id="name">
+    <form action="" [formGroup]="newsletterForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" formControlName="name">
         <label for="email">Email</label>
-        <input type="text" id="email">
-        <btn-primary btn-text="Se inscreva" variant="secondary"></btn-primary>
+        <input type="text" id="email" formControlName="email">
+        <btn-primary 
+            btn-text="Se inscreva" 
+            variant="secondary" 
+            (submit)="onSubmit() "
+            [disabled]="!newsletterForm.valid"
+            [loading]="loading()"
+            >
+        </btn-primary>
     </form>
 </section>
